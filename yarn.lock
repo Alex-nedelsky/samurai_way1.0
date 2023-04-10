@@ -2245,6 +2245,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-buddy/ide-toolbox@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@react-buddy/ide-toolbox@npm:2.3.1"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0
+  checksum: 0d89f3266baf986f891d9745d6e1ce4e8f7abd9245b1338c133dfaad35b95ab215106ffce958eee994a704f801fcd2f4f8f2e848d771fe8a60f6cd602ed5d7b9
+  languageName: node
+  linkType: hard
+
+"@react-buddy/palette-antd@npm:^4.18.1":
+  version: 4.18.1
+  resolution: "@react-buddy/palette-antd@npm:4.18.1"
+  dependencies:
+    "@react-buddy/ide-toolbox": ^2.3.1
+  peerDependencies:
+    "@ant-design/icons": ^4.7.0
+    antd: ^4.18.3
+    react: ^17.0.0 || ^18.0.0
+  checksum: 6137bb0f3d161e7512af10e0de8c054bb0996d02423505ab94763ec188ea883cc2f8004cc728d6b948d63750bd583db6e68978c1b642208ee8dbe461e17e2d7a
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.0
   resolution: "@rollup/plugin-babel@npm:5.3.0"
@@ -11907,6 +11929,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "samurai-way@workspace:."
   dependencies:
+    "@react-buddy/ide-toolbox": ^2.3.1
+    "@react-buddy/palette-antd": ^4.18.1
     "@testing-library/jest-dom": 5.14.1
     "@testing-library/react": 12.0.0
     "@testing-library/user-event": 13.2.1
