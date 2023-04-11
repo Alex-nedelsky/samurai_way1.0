@@ -1,31 +1,16 @@
 import React from 'react';
 import './App.css';
+import Technologies from "./Technologies";
+import Header from "./Header";
 
-
-const App = () => {
-  return (
-    <div className="App">
-     Hello, samurai! Let's go!
-    </div>
-  );
+function App() {
+    return (
+        <div>
+            <Header/>
+            <Technologies/>
+        </div>
+    );
 }
 
-const Technologies = () => {
-  return (
-      <div>
-          <ul>
-              <li>css</li>
-              <li>html</li>
-              <li>js</li>
-              <li>react</li>
-          </ul>
-      </div>
-  )
-}
-
-
-const Header = () => {
-
-}
 
 export default App;
