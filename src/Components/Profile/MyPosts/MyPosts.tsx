@@ -4,15 +4,19 @@ import Post from "./Post/Post";
 
 function MyPosts() {
     return (
-        <div className={s.nav}>
+        <div className={s.postsBlock}>
+         <h3>My posts</h3>
             <div>
-                <textarea></textarea>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
                 <button>Add post</button>
-                <button>Cancel</button>
+                </div>
             </div>
             <div className={s.posts}>
-                <Post message='HI, how are you?' likesCount="15" />
-                <Post message="It's my first post" likesCount="20" />
+                <Post message='HI, how are you?' likesCount="15"/>
+                <Post message="It's my first post" likesCount="20"/>
             </div>
 
 

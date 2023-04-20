@@ -1,36 +1,42 @@
 import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 
-function Dialogs() {
+let DilogItem = (props: { id: string; name: string }) => {
+
+    let path = "/dialogs/" + props.id;
+    return (
+        <div className={s.dialog + ' ' + s.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message = (props:{ message: string }) => {
+    return (
+        <div className={s.message}>{props.message}</div>
+    )
+}
+
+
+function Dialogs(props: any) {
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItem}>
-                <div className={s.dialog + ' ' + s.active}>
-                   <NavLink to="/dialogs/1">puch</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to="/dialogs/2">xrusch</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to="/dialogs/3">pupa</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to="/dialogs/4">drisch</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to="/dialogs/5">kon'</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to="/dialogs/6">manda</NavLink>
-                </div>
+                <DilogItem name="Dimich" id="1"/>
+                <DilogItem name="Andrey" id="2"/>
+                <DilogItem name="Sveta" id="3"/>
+                <DilogItem name="Sasha" id="4"/>
+                <DilogItem name="Viktor" id="5"/>
+                <DilogItem name="Valera" id="6"/>
             </div>
             <div className={s.messages}>
-                <div className={s.message}>Hi</div>
-                <div className={s.message}>Huy</div>
-                <div className={s.message}>Yo!</div>
+                <Message message="yo" />
+                <Message message="hallo world" />
+                <Message message="wathup" />
             </div>
         </div>
-    )
+)
 }
 
 export default Dialogs
